@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逛三园 - 互动游戏</title>
+    <link rel="stylesheet" href="guangsanyuan.css">
+</head>
+<body>
+    <!-- 首页 -->
+    <div id="homePage" class="page active">
+        <header>
+            <h1>逛三园</h1>
+            <p class="subtitle">选择一个园区开始游戏</p>
+        </header>
+        
+        <main class="garden-grid">
+            <div class="garden-item" data-garden="zoo">
+                <div class="garden-icon">🐾</div>
+                <h2>动物园</h2>
+            </div>
+            <div class="garden-item" data-garden="botanical">
+                <div class="garden-icon">🌿</div>
+                <h2>植物园</h2>
+            </div>
+            <div class="garden-item" data-garden="fruit">
+                <div class="garden-icon">🍎</div>
+                <h2>水果园</h2>
+            </div>
+            <div class="garden-item" data-garden="vegetable">
+                <div class="garden-icon">🥬</div>
+                <h2>蔬菜园</h2>
+            </div>
+            <div class="garden-item" data-garden="appliance">
+                <div class="garden-icon">📺</div>
+                <h2>家电园</h2>
+            </div>
+            <div class="garden-item" data-garden="brand">
+                <div class="garden-icon">🏷️</div>
+                <h2>品牌园</h2>
+            </div>
+            <div class="garden-item" data-garden="country">
+                <div class="garden-icon">🌍</div>
+                <h2>国家园</h2>
+            </div>
+            <div class="garden-item" data-garden="star">
+                <div class="garden-icon">⭐</div>
+                <h2>明星园</h2>
+            </div>
+            <div class="garden-item" data-garden="car">
+                <div class="garden-icon">🚗</div>
+                <h2>汽车园</h2>
+            </div>
+        </main>
+        
+        <footer>
+            <button id="rulesBtn" class="rules-btn">游戏规则</button>
+        </footer>
+    </div>
+    
+    <!-- 游戏页面 -->
+    <div id="gamePage" class="page">
+        <header class="game-header">
+            <button id="backBtn" class="back-btn">← 返回</button>
+            <div class="score-container">
+                <span class="score-label">连续点击：</span>
+                <span id="score" class="score">0</span>
+            </div>
+            <button id="drinkBtn" class="drink-btn">🍻 喝酒</button>
+        </header>
+        
+        <main class="game-main">
+            <h2 id="currentGarden" class="garden-title"></h2>
+            <div class="words-container">
+                <div class="word-option" data-index="0">
+                    <div class="word-content"></div>
+                </div>
+                <div class="word-option" data-index="1">
+                    <div class="word-content"></div>
+                </div>
+                <div class="word-option" data-index="2">
+                    <div class="word-content"></div>
+                </div>
+                <div class="word-option" data-index="3">
+                    <div class="word-content"></div>
+                </div>
+                <div class="word-option" data-index="4">
+                    <div class="word-content"></div>
+                </div>
+                <div class="word-option" data-index="5">
+                    <div class="word-content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 游戏规则弹窗 -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>游戏规则</h2>
+            <ul>
+                <li>选择一个园区进入游戏</li>
+                <li>点击屏幕中央的名称，它会平滑消失并出现新的名称</li>
+                <li>连续点击相同园区的不同名称获得分数</li>
+                <li>名称会按随机顺序出现，无重复直到所有名称展示完毕</li>
+                <li>支持9种园区：动物园、植物园、水果园、蔬菜园、家电园、品牌园、国家园、明星园和汽车园</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="guangsanyuan.js"></script>
+</body>
+</html>
