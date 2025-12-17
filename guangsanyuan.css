@@ -139,7 +139,7 @@ body {
 }
 
 /* 规则按钮 */
-.rules-btn {
+.rules-btn, .message-btn {
     background: rgba(255,255,255,0.9);
     border: none;
     padding: 12px 25px;
@@ -149,12 +149,22 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 0 10px;
 }
 
-.rules-btn:hover {
+.rules-btn:hover, .message-btn:hover {
     background: #fff;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.message-btn {
+    background: linear-gradient(135deg, #48dbfb 0%, #0984e3 100%);
+    color: white;
+}
+
+.message-btn:hover {
+    background: linear-gradient(135deg, #0984e3 0%, #48dbfb 100%);
 }
 
 /* 游戏页面样式 */

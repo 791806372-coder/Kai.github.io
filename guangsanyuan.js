@@ -210,6 +210,12 @@ class GameManager {
             this.playDrinkSound();
             this.showDrinkAlert();
         });
+        
+        // 留言板按钮事件
+        document.getElementById('messageBoardBtn').addEventListener('click', () => {
+            this.playClickSound();
+            window.location.href = 'messageboard.html';
+        });
     }
     
     startGame(gardenType) {
