@@ -1,0 +1,587 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 页面切换 */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 首页样式 */
+#homePage {
+    text-align: center;
+}
+
+#homePage header {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+#homePage h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+}
+
+/* 园区网格布局 */
+.garden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.garden-item {
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+
+.garden-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    border-color: #667eea;
+}
+
+.garden-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.garden-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+/* 园区特定主题色 */
+.garden-item[data-garden="zoo"]:hover {
+    border-color: #ff6b6b;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+}
+
+.garden-item[data-garden="botanical"]:hover {
+    border-color: #10ac84;
+    background: linear-gradient(135deg, #10ac84 0%, #00d2d3 100%);
+    color: white;
+}
+
+.garden-item[data-garden="fruit"]:hover {
+    border-color: #ff9ff3;
+    background: linear-gradient(135deg, #ff9ff3 0%, #f368e0 100%);
+    color: white;
+}
+
+.garden-item[data-garden="vegetable"]:hover {
+    border-color: #54a0ff;
+    background: linear-gradient(135deg, #54a0ff 0%, #0984e3 100%);
+    color: white;
+}
+
+.garden-item[data-garden="appliance"]:hover {
+    border-color: #ff9f43;
+    background: linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%);
+    color: white;
+}
+
+.garden-item[data-garden="brand"]:hover {
+    border-color: #00d2d3;
+    background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%);
+    color: white;
+}
+
+.garden-item[data-garden="country"]:hover {
+    border-color: #ff6b6b;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff9ff3 100%);
+    color: white;
+}
+
+.garden-item[data-garden="star"]:hover {
+    border-color: #ffd93d;
+    background: linear-gradient(135deg, #ffd93d 0%, #ff6b6b 100%);
+    color: white;
+}
+
+.garden-item[data-garden="car"]:hover {
+    border-color: #48dbfb;
+    background: linear-gradient(135deg, #48dbfb 0%, #0984e3 100%);
+    color: white;
+}
+
+/* 规则按钮 */
+.rules-btn {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #667eea;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.rules-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* 游戏页面样式 */
+#gamePage {
+    background: #f8f9fa;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #5a6fd8;
+    transform: translateX(-3px);
+}
+
+/* 喝酒按钮样式 */
+.drink-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.drink-btn:hover {
+    background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.score-container {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.game-main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.garden-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+/* 单词容器 */
+.words-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.word-option {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.word-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.word-content {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+    transition: all 0.5s ease;
+    user-select: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    word-break: break-word;
+    padding: 0 10px;
+}
+
+/* 单词动画 */
+.word-fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.word-fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 游戏页面特定主题色 */
+#gamePage[data-theme="zoo"] .word-content {
+    color: #ff6b6b;
+}
+
+#gamePage[data-theme="botanical"] .word-content {
+    color: #10ac84;
+}
+
+#gamePage[data-theme="fruit"] .word-content {
+    color: #ff9ff3;
+}
+
+#gamePage[data-theme="vegetable"] .word-content {
+    color: #54a0ff;
+}
+
+#gamePage[data-theme="appliance"] .word-content {
+    color: #ff9f43;
+}
+
+#gamePage[data-theme="brand"] .word-content {
+    color: #00d2d3;
+}
+
+#gamePage[data-theme="country"] .word-content {
+    color: #ff6b6b;
+}
+
+#gamePage[data-theme="star"] .word-content {
+    color: #ffd93d;
+}
+
+#gamePage[data-theme="car"] .word-content {
+    color: #48dbfb;
+}
+
+/* 弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.modal-content li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #10ac84;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #homePage h1 {
+        font-size: 2.5rem;
+    }
+    
+    .garden-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .garden-icon {
+        font-size: 3rem;
+    }
+    
+    .garden-item h2 {
+        font-size: 1.2rem;
+    }
+    
+    .current-word {
+        font-size: 2.5rem;
+    }
+    
+    .word-container {
+        padding: 60px 20px;
+        min-height: 250px;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #homePage h1 {
+        font-size: 2rem;
+    }
+    
+    .garden-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .garden-item {
+        padding: 25px 15px;
+    }
+    
+    .garden-icon {
+        font-size: 2.5rem;
+    }
+    
+    .current-word {
+        font-size: 2rem;
+    }
+    
+    .word-container {
+        padding: 50px 15px;
+        min-height: 200px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* 确保对比度符合accessibility标准 */
+.current-word, .garden-item h2, .score-container {
+    color: #333;
+    contrast-ratio: 4.5;
+}
+
+/* 喝酒提示样式 */
+.drink-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: rgba(255, 107, 107, 0.95);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    z-index: 1001;
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.drink-alert.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alert-icon {
+    font-size: 3rem;
+    animation: bounce 1s infinite;
+}
+
+.alert-text {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+    }
+    
+    #gamePage {
+        background: #2d3436;
+    }
+    
+    .garden-item {
+        background: rgba(52, 73, 94, 0.95);
+        color: white;
+    }
+    
+    .garden-item h2 {
+        color: white;
+    }
+    
+    .rules-btn {
+        background: rgba(52, 73, 94, 0.95);
+        color: #00d2d3;
+    }
+    
+    .game-header {
+        background: #34495e;
+        color: white;
+    }
+    
+    .score-label {
+        color: white;
+    }
+    
+    .word-container {
+        background: #34495e;
+    }
+    
+    .garden-title {
+        color: white;
+    }
+    
+    .drink-alert {
+        background: rgba(231, 76, 60, 0.95);
+    }
+}
